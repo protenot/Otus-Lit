@@ -38,8 +38,8 @@ import {LitElement, html, css} from 'lit';
 //window.customElements.define('my-element', MyElement);
 
 class MyElement extends LitElement {
-  static properties = {
-    data: { type: Object },
+  static get properties () {
+   return {data: { type: Object }};
   };
   static styles = css`
     :host {
@@ -72,7 +72,7 @@ class MyElement extends LitElement {
   `;
   constructor() {
     super();
-    this.data = {};
+    this.data = { "name": 1, "items": [{ "name": 2, "items": [{ "name": 3 }] }] };
   }
 
   render() {
