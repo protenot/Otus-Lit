@@ -5,10 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="my-element.js"></script>
-    <title>Lit Starter Kit</title>
+    <title>Lit</title>
   </head>
   <body>
     <a href="/dev/index.html">Component Demo</a>
-    <my-element name = 'Jhon'></my-element>
+    <!-- <my-element></my-element> -->
+    <my-element .data=${{ "name": 1, "items": [{ "name": 2, "items": [{ "name": 3 }] }] }}></my-element>
+    
   </body>
 </html>
